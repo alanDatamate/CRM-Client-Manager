@@ -1,0 +1,32 @@
+modules:
+  jira:globalPage:
+    - key: crm-client-manager
+      resource: main
+      resolver:
+        function: resolver
+      title: CRM client manager
+      icon: graph-bar
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/application/build
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/aaf092ee-2464-46a9-8349-ee7b433395df
+permissions:
+  scopes:
+    - storage:app
+    - read:jira-work
+    - read:jira-user
+    - read:avatar:jira
+    - manage:jira-configuration
+    - read:sprint:jira-software
+    - read:board-scope:jira-software
+    - read:project:jira
+    - write:jira-work
+  external:
+    images:
+      - "*.giphy.com"
