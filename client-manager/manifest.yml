@@ -30,3 +30,7 @@ permissions:
   external:
     images:
       - "*.giphy.com"
+    fetch:
+      backend:
+        - https://5173-59-94-176-126.ngrok-free.app
+        
